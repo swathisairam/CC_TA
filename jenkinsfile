@@ -1,12 +1,12 @@
 pipeline {
     agent any
 
-    stages {
-        stage('Build') {
-            steps {
-                sh 'g++ Jenkins-main/hello.cpp -o Jenkins-main/hello_exec'
-            }
-        }
+    stage('Build') {
+    steps {
+        sh 'g++ main/hello.cpp -o main/hello_exec'
+    }
+}
+
 
         stage('Test') {
             steps {
